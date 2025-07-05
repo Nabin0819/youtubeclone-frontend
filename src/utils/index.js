@@ -69,7 +69,7 @@ export const timeSince = (timestamp) => {
 
 export const upload = async (resourceType, file) => {
   const formData = new FormData();
-  formData.append("upload_preset", "youtubeclone");
+  formData.append("upload_preset", process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET);
   formData.append("file", file);
 
   let toastId = null;
